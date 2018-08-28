@@ -15,12 +15,17 @@ var property sueldo = 15000
 var totalcobrado= 0
 
 
-	method sueldo() { 
-		return 15000
-	}
-	method sueldo(nuevoValor) { 
-		sueldo = nuevoValor
-	}
+//Como var sueldo cambio a var property sueldo eliminaos los metodos de abajo
+
+//	method sueldo() { 
+//		return 15000
+//	}
+//	
+//	method sueldo(nuevoValor) { 
+//		sueldo = nuevoValor
+//	}
+
+//Asi mismo modificamos el contenido de los tests.
 	
 	method cobrarSueldo(){
 		
@@ -54,7 +59,17 @@ object baigorria {
 	}
 	
 	method gastar(cuanto){
-		deuda+= cuanto
+		
+			if (dinero > cuanto){
+			dinero=dinero-cuanto
+			deuda=0 	
+		} else {
+			
+			deuda= deuda + cuanto
+			dinero=0
+			
+		}
+		
 		
 	}
 	
